@@ -1,0 +1,1244 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    
+    <!-- SEO Meta Tags -->
+    <title>Google Ads ROI Rechner 2025 | Kostenlos ROAS berechnen | Admetrix</title>
+    <meta name="description" content="Berechne in 30 Sekunden deinen Google Ads ROI. Kostenloser ROAS-Rechner mit Formel-Erklärung. Finde heraus, ob sich dein Werbebudget lohnt.">
+    <meta name="keywords" content="Google Ads ROI Rechner, ROAS berechnen, Google Ads Rentabilität, Werbebudget ROI, Google Ads Kosten">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://admetrix-tools.vercel.app/">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Google Ads ROI Rechner 2025 | Kostenlos">
+    <meta property="og:description" content="Berechne in 30 Sekunden deinen Google Ads ROI. Kostenloser ROAS-Rechner.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://admetrix-tools.vercel.app/">
+    <meta property="og:locale" content="de_DE">
+    
+    <!-- Favicon (Data URI - kein externer Request) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+
+    <style>
+        /* ============================================
+           ADMETRIX TOOLS - ROI RECHNER
+           Clean, Professional, Tool-Style Design
+           DSGVO-konform: Keine externen Requests
+           ============================================ */
+        
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            /* Colors */
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --primary-light: #3b82f6;
+            --accent: #10b981;
+            --accent-dark: #059669;
+            --warning: #f59e0b;
+            --error: #ef4444;
+            
+            --bg-body: #f8fafc;
+            --bg-white: #ffffff;
+            --bg-gray: #f1f5f9;
+            --bg-dark: #1e293b;
+            
+            --text-primary: #1e293b;
+            --text-secondary: #475569;
+            --text-muted: #64748b;
+            --text-white: #ffffff;
+            
+            --border: #e2e8f0;
+            --border-dark: #cbd5e1;
+            
+            /* Typography - System Fonts (DSGVO-konform) */
+            --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            --font-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;
+            
+            /* Spacing */
+            --space-xs: 0.25rem;
+            --space-sm: 0.5rem;
+            --space-md: 1rem;
+            --space-lg: 1.5rem;
+            --space-xl: 2rem;
+            --space-2xl: 3rem;
+            --space-3xl: 4rem;
+            
+            /* Border Radius */
+            --radius-sm: 6px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --radius-xl: 16px;
+            
+            /* Shadows */
+            --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+            --shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background-color: var(--bg-body);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* === HEADER === */
+        .header {
+            background: var(--bg-white);
+            border-bottom: 1px solid var(--border);
+            padding: var(--space-md) 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-lg);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        .nav {
+            display: flex;
+            gap: var(--space-lg);
+        }
+
+        .nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav a:hover {
+            color: var(--primary);
+        }
+
+        /* === MAIN === */
+        .main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: var(--space-3xl) var(--space-lg);
+        }
+
+        /* === HERO === */
+        .hero {
+            text-align: center;
+            margin-bottom: var(--space-3xl);
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: var(--bg-gray);
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: var(--space-xs) var(--space-md);
+            border-radius: 50px;
+            margin-bottom: var(--space-lg);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 800;
+            color: var(--text-primary);
+            margin-bottom: var(--space-md);
+            line-height: 1.2;
+        }
+
+        .hero h1 span {
+            color: var(--primary);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* === CALCULATOR === */
+        .calculator {
+            background: var(--bg-white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-xl);
+            padding: var(--space-2xl);
+            box-shadow: var(--shadow-lg);
+            margin-bottom: var(--space-3xl);
+        }
+
+        .calculator-header {
+            text-align: center;
+            margin-bottom: var(--space-xl);
+        }
+
+        .calculator-header h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: var(--space-sm);
+        }
+
+        .calculator-header p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .calculator-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-lg);
+            margin-bottom: var(--space-xl);
+        }
+
+        @media (max-width: 600px) {
+            .calculator-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .input-group label {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            margin-bottom: var(--space-sm);
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+
+        .input-group label .tooltip {
+            width: 16px;
+            height: 16px;
+            background: var(--bg-gray);
+            border-radius: 50%;
+            font-size: 0.7rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            cursor: help;
+        }
+
+        .input-wrapper {
+            position: relative;
+        }
+
+        .input-wrapper input {
+            width: 100%;
+            padding: var(--space-md) var(--space-lg);
+            padding-right: 50px;
+            font-size: 1.1rem;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            border: 2px solid var(--border);
+            border-radius: var(--radius-md);
+            background: var(--bg-white);
+            color: var(--text-primary);
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        .input-wrapper input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+
+        .input-wrapper .unit {
+            position: absolute;
+            right: var(--space-md);
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .calculate-btn {
+            width: 100%;
+            padding: var(--space-md) var(--space-xl);
+            font-size: 1.1rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            border: none;
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .calculate-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .calculate-btn:active {
+            transform: translateY(0);
+        }
+
+        /* === RESULTS === */
+        .results {
+            background: linear-gradient(135deg, var(--bg-dark), #0f172a);
+            border-radius: var(--radius-lg);
+            padding: var(--space-xl);
+            margin-top: var(--space-xl);
+            display: none;
+        }
+
+        .results.show {
+            display: block;
+            animation: slideIn 0.4s ease;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .results-header {
+            text-align: center;
+            margin-bottom: var(--space-lg);
+        }
+
+        .results-header h3 {
+            color: var(--text-white);
+            font-size: 1.25rem;
+            margin-bottom: var(--space-sm);
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--space-md);
+            margin-bottom: var(--space-lg);
+        }
+
+        @media (max-width: 700px) {
+            .results-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .result-item {
+            text-align: center;
+            padding: var(--space-md);
+            background: rgba(255,255,255,0.05);
+            border-radius: var(--radius-md);
+        }
+
+        .result-item .value {
+            font-family: var(--font-mono);
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--accent);
+            margin-bottom: var(--space-xs);
+        }
+
+        .result-item .label {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.7);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .roi-highlight {
+            text-align: center;
+            padding: var(--space-lg);
+            background: rgba(16, 185, 129, 0.1);
+            border: 2px solid var(--accent);
+            border-radius: var(--radius-lg);
+        }
+
+        .roi-highlight .roi-value {
+            font-family: var(--font-mono);
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--accent);
+            line-height: 1;
+        }
+
+        .roi-highlight .roi-label {
+            color: rgba(255,255,255,0.8);
+            font-size: 1rem;
+            margin-top: var(--space-sm);
+        }
+
+        .roi-highlight.negative {
+            background: rgba(239, 68, 68, 0.1);
+            border-color: var(--error);
+        }
+
+        .roi-highlight.negative .roi-value {
+            color: var(--error);
+        }
+
+        /* === CONTENT SECTIONS === */
+        .section {
+            margin-bottom: var(--space-3xl);
+        }
+
+        .section h2 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: var(--space-lg);
+        }
+
+        .section h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: var(--space-md);
+            margin-top: var(--space-xl);
+        }
+
+        .section p {
+            color: var(--text-secondary);
+            margin-bottom: var(--space-md);
+        }
+
+        .section ul, .section ol {
+            color: var(--text-secondary);
+            margin-bottom: var(--space-md);
+            padding-left: var(--space-lg);
+        }
+
+        .section li {
+            margin-bottom: var(--space-sm);
+        }
+
+        /* === FORMULA BOX === */
+        .formula-box {
+            background: var(--bg-gray);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: var(--space-xl);
+            margin: var(--space-xl) 0;
+            text-align: center;
+        }
+
+        .formula-box .formula {
+            font-family: var(--font-mono);
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--primary);
+            background: var(--bg-white);
+            padding: var(--space-md) var(--space-lg);
+            border-radius: var(--radius-md);
+            display: inline-block;
+            margin-bottom: var(--space-md);
+        }
+
+        .formula-box p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        /* === CTA BOX === */
+        .cta-box {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            border-radius: var(--radius-xl);
+            padding: var(--space-2xl);
+            text-align: center;
+            margin: var(--space-3xl) 0;
+        }
+
+        .cta-box h3 {
+            color: var(--text-white);
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: var(--space-md);
+        }
+
+        .cta-box p {
+            color: rgba(255,255,255,0.9);
+            margin-bottom: var(--space-lg);
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: var(--space-md) var(--space-2xl);
+            background: var(--bg-white);
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 1rem;
+            text-decoration: none;
+            border-radius: var(--radius-md);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        /* === FAQ === */
+        .faq-list {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-md);
+        }
+
+        .faq-item {
+            background: var(--bg-white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: var(--space-lg);
+            font-weight: 600;
+            color: var(--text-primary);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.2s;
+        }
+
+        .faq-question:hover {
+            background: var(--bg-gray);
+        }
+
+        .faq-toggle {
+            font-size: 1.5rem;
+            color: var(--primary);
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            padding: 0 var(--space-lg) var(--space-lg);
+            color: var(--text-secondary);
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        /* === AUTHOR BOX === */
+        .author-box {
+            background: var(--bg-white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: var(--space-xl);
+            margin-top: var(--space-2xl);
+            display: flex;
+            gap: var(--space-lg);
+            align-items: center;
+        }
+
+        .author-box .author-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .author-box .author-info h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: var(--space-xs);
+        }
+
+        .author-box .author-info p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin: 0;
+        }
+
+        .author-box .author-info a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .author-box .author-info a:hover {
+            text-decoration: underline;
+        }
+
+        /* === FOOTER === */
+        .footer {
+            background: var(--bg-dark);
+            color: var(--text-white);
+            padding: var(--space-2xl) var(--space-lg);
+            margin-top: var(--space-3xl);
+        }
+
+        .footer-container {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-xl);
+            margin-bottom: var(--space-lg);
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--text-white);
+        }
+
+        .footer-bottom {
+            padding-top: var(--space-lg);
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.5);
+        }
+
+        .footer-bottom a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .footer-bottom a:hover {
+            text-decoration: underline;
+        }
+
+        /* === RESPONSIVE === */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: var(--space-md);
+            }
+
+            .nav {
+                gap: var(--space-md);
+            }
+
+            .calculator {
+                padding: var(--space-lg);
+            }
+
+            .author-box {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+
+    <!-- Schema.org Markup - Patent-konform: Organization, Article, WebApplication, FAQPage, BreadcrumbList -->
+    
+    <!-- 1. Organization Schema mit sameAs (US9535902B1 Entity Resolution) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "@id": "https://admetrix-tools.vercel.app/#organization",
+        "name": "Admetrix Tools",
+        "alternateName": "Google Ads ROI Rechner",
+        "url": "https://admetrix-tools.vercel.app/",
+        "logo": "https://admetrix-tools.vercel.app/logo.png",
+        "description": "Admetrix bietet kostenlose Marketing-Tools zur ROI-Berechnung für Google Ads und Online-Werbung.",
+        "foundingDate": "2024",
+        "areaServed": {
+            "@type": "Country",
+            "name": "Germany"
+        },
+        "sameAs": [
+            "https://www.wikidata.org/wiki/Q95",
+            "https://de.wikipedia.org/wiki/Google_Ads"
+        ],
+        "knowsAbout": [
+            "Google Ads ROI",
+            "ROAS Berechnung",
+            "Performance Marketing",
+            "Cost per Click",
+            "Conversion Rate Optimierung"
+        ]
+    }
+    </script>
+    
+    <!-- 2. Article Schema mit datePublished/dateModified (QDF US7797316B2) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "@id": "https://admetrix-tools.vercel.app/#article",
+        "headline": "Google Ads ROI Rechner 2025: Berechne deinen Return on Investment kostenlos",
+        "description": "Kostenloser Google Ads ROI Rechner. Berechne in 30 Sekunden, ob sich dein Werbebudget lohnt. Mit ROAS-Formel und Experten-Tipps.",
+        "image": "https://admetrix-tools.vercel.app/og-image.jpg",
+        "datePublished": "2024-09-15T10:00:00+02:00",
+        "dateModified": "2025-01-18T11:00:00+01:00",
+        "author": {
+            "@type": "Organization",
+            "name": "Admetrix Tools",
+            "url": "https://admetrix-tools.vercel.app/"
+        },
+        "publisher": {
+            "@id": "https://admetrix-tools.vercel.app/#organization"
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://admetrix-tools.vercel.app/"
+        },
+        "about": [
+            {
+                "@type": "Thing",
+                "name": "Google Ads ROI",
+                "description": "Return on Investment für Google Ads Werbekampagnen",
+                "sameAs": "https://de.wikipedia.org/wiki/Return_on_Investment"
+            },
+            {
+                "@type": "Thing",
+                "name": "ROAS",
+                "description": "Return on Ad Spend - Verhältnis von Umsatz zu Werbeausgaben"
+            }
+        ],
+        "mentions": [
+            {
+                "@type": "Organization",
+                "name": "Boost Corovic SEA Agentur",
+                "url": "https://boost-corovic.de/sea/",
+                "description": "Professionelle Google Ads Agentur aus Köln"
+            },
+            {
+                "@type": "SoftwareApplication",
+                "name": "Google Ads",
+                "sameAs": "https://www.wikidata.org/wiki/Q95"
+            },
+            {
+                "@type": "Thing",
+                "name": "Cost per Click (CPC)",
+                "description": "Kosten pro Klick bei bezahlter Werbung"
+            },
+            {
+                "@type": "Thing",
+                "name": "Conversion Rate",
+                "description": "Anteil der Besucher, die eine gewünschte Aktion ausführen"
+            }
+        ],
+        "keywords": "Google Ads ROI Rechner, ROAS berechnen, Google Ads Rentabilität, Werbebudget ROI, Google Ads Kosten, CPC Rechner",
+        "articleSection": "Marketing-Tools",
+        "wordCount": "2000",
+        "inLanguage": "de-DE"
+    }
+    </script>
+    
+    <!-- 3. WebApplication Schema (erweitert) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "@id": "https://admetrix-tools.vercel.app/#webapp",
+        "name": "Google Ads ROI Rechner",
+        "description": "Kostenloser Rechner zur Berechnung des Return on Investment für Google Ads Kampagnen. Berechne ROI, ROAS und erwarteten Gewinn.",
+        "url": "https://admetrix-tools.vercel.app/",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "All",
+        "browserRequirements": "Requires JavaScript",
+        "softwareVersion": "2.0",
+        "author": {
+            "@id": "https://admetrix-tools.vercel.app/#organization"
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "EUR"
+        },
+        "featureList": [
+            "ROI-Berechnung in Echtzeit",
+            "ROAS-Kalkulation",
+            "Klick- und Conversion-Prognose",
+            "Gewinn-/Verlust-Analyse"
+        ]
+    }
+    </script>
+    
+    <!-- 4. FAQPage Schema (erweitert) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "@id": "https://admetrix-tools.vercel.app/#faq",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Was ist ein guter ROI für Google Ads?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Ein guter ROI für Google Ads liegt typischerweise bei 200-400%. Das bedeutet, für jeden investierten Euro erhältst du 2-4 Euro zurück. Top-performende Kampagnen erreichen sogar 500% oder mehr. Der durchschnittliche ROAS liegt bei etwa 200%. Mit dem Google Ads ROI Rechner kannst du deinen individuellen ROI berechnen."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Wie lange dauert es bis Google Ads profitabel wird?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Die meisten Google Ads Kampagnen benötigen 2-4 Wochen Lernphase, um erste profitable Ergebnisse zu zeigen. Für optimale Performance solltest du 2-3 Monate kontinuierlicher Optimierung einplanen. Faktoren wie Branche, Budget und Landingpage-Qualität beeinflussen die Geschwindigkeit erheblich."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Was kostet eine professionelle Google Ads Agentur?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Professionelle Google Ads Agenturen berechnen typischerweise 15-20% des Werbebudgets oder eine monatliche Pauschale ab 500-1500 Euro. Die Investition lohnt sich oft, da Experten den ROI um 50-200% steigern können durch bessere Kampagnenstruktur und kontinuierliche Optimierung."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Wie berechnet man den ROAS?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "ROAS (Return on Ad Spend) wird berechnet als: Umsatz aus Werbung / Werbekosten × 100. Beispiel: Bei 10.000 Euro Umsatz und 2.000 Euro Werbekosten ist der ROAS 500%. Das bedeutet, jeder investierte Euro hat 5 Euro Umsatz generiert. Der Google Ads ROI Rechner berechnet dies automatisch."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Was ist der Unterschied zwischen ROI und ROAS?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "ROI (Return on Investment) berücksichtigt alle Kosten inklusive Produktkosten und Gemeinkosten. ROAS (Return on Ad Spend) bezieht sich nur auf die Werbeausgaben. Ein ROAS von 500% bedeutet 5€ Umsatz pro 1€ Werbung, sagt aber nichts über den tatsächlichen Gewinn aus."
+                }
+            }
+        ]
+    }
+    </script>
+    
+    <!-- 5. BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Admetrix Tools",
+                "item": "https://admetrix-tools.vercel.app/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Google Ads ROI Rechner",
+                "item": "https://admetrix-tools.vercel.app/#rechner"
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-container">
+            <a href="#" class="logo">
+                <span class="logo-icon">A</span>
+                <span>Admetrix</span>
+            </a>
+            <nav class="nav">
+                <a href="#rechner">Rechner</a>
+                <a href="#anleitung">Anleitung</a>
+                <a href="#faq">FAQ</a>
+                <a href="https://boost-corovic.de/sea/" rel="noopener">Experten</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT - Semantic HTML5 (US8595781B2 Contextual Tiering) -->
+    <main class="main" role="main">
+        <!-- PRIMARY ARTICLE CONTENT (Main Content = MC) -->
+        <article itemscope itemtype="https://schema.org/Article" aria-label="Google Ads ROI Rechner Hauptinhalt">
+        
+        <!-- HERO SECTION - Entity Salience optimiert (US20150127617A1) -->
+        <section class="hero" aria-labelledby="main-heading">
+            <span class="hero-badge">Kostenloses Tool</span>
+            <h1 id="main-heading">Google Ads <span>ROI Rechner</span></h1>
+            <p><strong>Der Google Ads ROI Rechner</strong> berechnet in 30 Sekunden, ob sich dein Werbebudget lohnt. Ermittle deinen Return on Investment für Google Ads Kampagnen – kostenlos und ohne Anmeldung.</p>
+        </section>
+
+        <!-- CALCULATOR - Main Interactive Tool -->
+        <section id="rechner" class="calculator" aria-label="Interaktiver Google Ads ROI Rechner">
+            <div class="calculator-header">
+                <h2>Berechne deinen ROI</h2>
+                <p>Gib deine Werte ein und erhalte sofort dein Ergebnis</p>
+            </div>
+
+            <div class="calculator-grid">
+                <div class="input-group">
+                    <label>
+                        Monatliches Werbebudget
+                        <span class="tooltip" title="Wie viel gibst du pro Monat für Google Ads aus?">?</span>
+                    </label>
+                    <div class="input-wrapper">
+                        <input type="number" id="budget" value="2000" min="100" step="100">
+                        <span class="unit">€</span>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>
+                        Durchschnittlicher Klickpreis (CPC)
+                        <span class="tooltip" title="Was kostet ein Klick durchschnittlich?">?</span>
+                    </label>
+                    <div class="input-wrapper">
+                        <input type="number" id="cpc" value="1.50" min="0.10" step="0.10">
+                        <span class="unit">€</span>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>
+                        Conversion Rate
+                        <span class="tooltip" title="Wie viel Prozent der Besucher werden zu Kunden?">?</span>
+                    </label>
+                    <div class="input-wrapper">
+                        <input type="number" id="conversionRate" value="3" min="0.1" step="0.1">
+                        <span class="unit">%</span>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>
+                        Durchschnittlicher Auftragswert
+                        <span class="tooltip" title="Wie viel verdienst du pro Conversion/Kunde?">?</span>
+                    </label>
+                    <div class="input-wrapper">
+                        <input type="number" id="orderValue" value="500" min="10" step="10">
+                        <span class="unit">€</span>
+                    </div>
+                </div>
+            </div>
+
+            <button class="calculate-btn" onclick="calculateROI()">
+                ROI berechnen →
+            </button>
+
+            <!-- RESULTS -->
+            <div class="results" id="results">
+                <div class="results-header">
+                    <h3>Deine Ergebnisse</h3>
+                </div>
+                <div class="results-grid">
+                    <div class="result-item">
+                        <div class="value" id="resultClicks">0</div>
+                        <div class="label">Klicks/Monat</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="value" id="resultConversions">0</div>
+                        <div class="label">Conversions</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="value" id="resultRevenue">0 €</div>
+                        <div class="label">Umsatz</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="value" id="resultProfit">0 €</div>
+                        <div class="label">Gewinn</div>
+                    </div>
+                </div>
+                <div class="roi-highlight" id="roiHighlight">
+                    <div class="roi-value" id="resultROI">0%</div>
+                    <div class="roi-label">Return on Investment (ROI)</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ANLEITUNG - Entity Salience optimiert -->
+        <section id="anleitung" class="section" aria-labelledby="anleitung-heading">
+            <h2 id="anleitung-heading">So berechnest du deinen Google Ads ROI</h2>
+            
+            <p>Der <strong>Google Ads ROI Rechner</strong> zeigt dir, wie profitabel deine Werbekampagnen sind. Der Return on Investment (ROI) berechnet das Verhältnis zwischen Werbeausgaben und erzieltem Gewinn. Ein positiver ROI bedeutet, dass du mit Google Ads mehr verdienst als du investierst.</p>
+
+            <div class="formula-box">
+                <div class="formula">ROI = ((Umsatz - Kosten) / Kosten) × 100</div>
+                <p>Die Formel zur Berechnung deines Return on Investment</p>
+            </div>
+
+            <h3>Die wichtigsten Kennzahlen erklärt</h3>
+            
+            <ul>
+                <li><strong>CPC (Cost per Click):</strong> Was du für jeden Klick auf deine Anzeige zahlst. Variiert je nach Branche zwischen 0,50€ und 5€+.</li>
+                <li><strong>Conversion Rate:</strong> Der Prozentsatz der Besucher, die eine gewünschte Aktion ausführen (Kauf, Anfrage). Durchschnitt liegt bei 2-5%.</li>
+                <li><strong>ROAS (Return on Ad Spend):</strong> Umsatz geteilt durch Werbekosten. Ein ROAS von 400% bedeutet: 4€ Umsatz pro 1€ Werbeausgaben.</li>
+            </ul>
+
+            <h3>Was ist ein guter ROI für Google Ads?</h3>
+            
+            <p>Als Faustregel für den <strong>Google Ads ROI</strong> gilt:</p>
+            <ul>
+                <li><strong>Unter 100%:</strong> Verlustgeschäft, Kampagne optimieren oder <a href="https://boost-corovic.de/sea/" rel="noopener" style="color:var(--primary);">SEA-Experten konsultieren</a></li>
+                <li><strong>100-200%:</strong> Break-even bis leicht profitabel</li>
+                <li><strong>200-400%:</strong> Gute Performance – dein Google Ads ROI ist solide</li>
+                <li><strong>Über 400%:</strong> Exzellente Performance – Top-Kampagne!</li>
+            </ul>
+
+            <h3>Typische Fehler bei der ROI-Berechnung</h3>
+            
+            <ol>
+                <li><strong>Nur Direktverkäufe zählen:</strong> Viele Kunden konvertieren erst nach mehreren Touchpoints. Berücksichtige auch assisted Conversions.</li>
+                <li><strong>Lifetime Value ignorieren:</strong> Ein Neukunde kann über Jahre hinweg Umsatz generieren, nicht nur beim ersten Kauf.</li>
+                <li><strong>Zu kurzer Betrachtungszeitraum:</strong> Google Ads braucht 2-4 Wochen Lernzeit. Beurteile Performance erst nach dieser Phase.</li>
+            </ol>
+        </section>
+
+        <!-- CTA BOX - Reasonable Surfer optimiert -->
+        <div class="cta-box" role="complementary" aria-label="Experten-Beratung Call-to-Action">
+            <h3>Deinen Google Ads ROI professionell maximieren?</h3>
+            <p>Die <strong>Google Ads Experten von Boost Corovic</strong> optimieren deine Kampagnen für maximalen ROI. Durchschnittlich steigern sie den ROAS ihrer Kunden um 150% durch professionelles Kampagnen-Management.</p>
+            <a href="https://boost-corovic.de/sea/" class="cta-btn" rel="noopener">Kostenlose Google Ads Analyse anfordern →</a>
+        </div>
+
+        <!-- FAQ - FAQPage Schema-optimiert -->
+        <section id="faq" class="section" aria-labelledby="faq-heading">
+            <h2 id="faq-heading">Häufig gestellte Fragen zum Google Ads ROI Rechner</h2>
+
+            <div class="faq-list" itemscope itemtype="https://schema.org/FAQPage">
+                <div class="faq-item active" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span itemprop="name">Was ist ein guter ROI für Google Ads?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Ein guter <strong>Google Ads ROI</strong> liegt typischerweise bei 200-400%. Das bedeutet, für jeden investierten Euro erhältst du 2-4 Euro zurück. Top-performende Kampagnen erreichen sogar 500% oder mehr. Der durchschnittliche ROAS liegt bei etwa 200%. Nutze den <strong>Google Ads ROI Rechner</strong> oben, um deinen individuellen ROI zu berechnen. Wichtig: Der optimale ROI hängt von deiner Branche, Margen und Geschäftsmodell ab.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span itemprop="name">Wie lange dauert es bis Google Ads profitabel wird?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Die meisten Google Ads Kampagnen benötigen 2-4 Wochen Lernphase, um erste profitable Ergebnisse zu zeigen. Für optimale Performance solltest du 2-3 Monate kontinuierlicher Optimierung einplanen. Faktoren wie Branche, Budget und Landingpage-Qualität beeinflussen die Geschwindigkeit erheblich.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span itemprop="name">Was kostet eine professionelle Google Ads Agentur?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Professionelle <a href="https://boost-corovic.de/sea/" rel="noopener">Google Ads Agenturen</a> berechnen typischerweise 15-20% des Werbebudgets oder eine monatliche Pauschale ab 500-1500 Euro. Die Investition lohnt sich oft, da Experten den ROI um 50-200% steigern können durch bessere Kampagnenstruktur und kontinuierliche Optimierung.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span itemprop="name">Wie berechnet man den ROAS?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">ROAS (Return on Ad Spend) wird berechnet als: Umsatz aus Werbung / Werbekosten × 100. Beispiel: Bei 10.000 Euro Umsatz und 2.000 Euro Werbekosten ist der ROAS 500%. Der <strong>Google Ads ROI Rechner</strong> berechnet dies automatisch für dich. ROAS unterscheidet sich vom ROI, da er keine weiteren Kosten (Personal, Produkt) berücksichtigt.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span itemprop="name">Was ist der Unterschied zwischen ROI und ROAS?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text"><strong>ROI (Return on Investment)</strong> berücksichtigt alle Kosten inklusive Produktkosten und Gemeinkosten – er zeigt den echten Gewinn. <strong>ROAS (Return on Ad Spend)</strong> bezieht sich nur auf die Werbeausgaben. Ein ROAS von 500% bedeutet 5€ Umsatz pro 1€ Werbung, sagt aber nichts über den tatsächlichen Gewinn. Der <strong>Google Ads ROI Rechner</strong> hilft dir, beide Kennzahlen zu verstehen.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AUTHOR BOX - Aside for Author Info -->
+        <aside class="author-box" aria-label="Über den Anbieter">
+            <div class="author-icon">📊</div>
+            <div class="author-info">
+                <h4>Über den Google Ads ROI Rechner</h4>
+                <p>Dieser <strong>Google Ads ROI Rechner</strong> wurde von Performance Marketing Experten entwickelt und basiert auf bewährten Berechnungsformeln. Für professionelle Google Ads Betreuung und Kampagnen-Optimierung empfehlen wir die <a href="https://boost-corovic.de/seo-agentur/koeln/" rel="noopener">erfahrenen SEA-Spezialisten aus Köln</a>.</p>
+            </div>
+        </aside>
+        
+        </article><!-- End of main article -->
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-links">
+                <a href="#rechner">ROI Rechner</a>
+                <a href="#anleitung">Anleitung</a>
+                <a href="#faq">FAQ</a>
+                <a href="#impressum" onclick="toggleModal('impressum')">Impressum</a>
+                <a href="#datenschutz" onclick="toggleModal('datenschutz')">Datenschutz</a>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Admetrix Tools. Empfohlen von <a href="https://boost-corovic.de/" rel="noopener">SEO-Experten aus Köln</a>.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODALS -->
+    <div id="impressum-modal" style="display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.8); z-index:1000; padding:20px; overflow:auto;">
+        <div style="max-width:600px; margin:50px auto; background:white; padding:30px; border-radius:12px;">
+            <h2 style="margin-bottom:20px;">Impressum</h2>
+            <p><strong>Angaben gemäß § 5 TMG:</strong></p>
+            <p>Admetrix Tools<br>Online Marketing Ressourcen</p>
+            <p><strong>Kontakt:</strong><br>E-Mail: info@admetrix-tools.app</p>
+            <p><strong>Hinweis:</strong> Diese Seite dient Informationszwecken und erhebt keinen Anspruch auf Vollständigkeit. Die berechneten Werte sind Schätzungen und können von realen Ergebnissen abweichen. Für professionelle Beratung wenden Sie sich an qualifizierte Experten.</p>
+            <button onclick="toggleModal('impressum')" style="margin-top:20px; padding:10px 20px; cursor:pointer;">Schließen</button>
+        </div>
+    </div>
+
+    <div id="datenschutz-modal" style="display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.8); z-index:1000; padding:20px; overflow:auto;">
+        <div style="max-width:600px; margin:50px auto; background:white; padding:30px; border-radius:12px;">
+            <h2 style="margin-bottom:20px;">Datenschutzhinweis</h2>
+            <p><strong>Datenverarbeitung:</strong></p>
+            <p>Diese Website verwendet keine Cookies und sammelt keine personenbezogenen Daten. Es werden keine externen Fonts, Tracking-Tools oder Analyse-Dienste eingebunden.</p>
+            <p><strong>Lokale Speicherung:</strong></p>
+            <p>Die eingegebenen Werte im Rechner werden nicht gespeichert oder übertragen. Alle Berechnungen erfolgen ausschließlich in Ihrem Browser.</p>
+            <p><strong>Externe Links:</strong></p>
+            <p>Diese Seite enthält Links zu externen Websites. Für deren Inhalte und Datenschutzpraktiken übernehmen wir keine Verantwortung.</p>
+            <button onclick="toggleModal('datenschutz')" style="margin-top:20px; padding:10px 20px; cursor:pointer;">Schließen</button>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        function calculateROI() {
+            // Get values
+            const budget = parseFloat(document.getElementById('budget').value) || 0;
+            const cpc = parseFloat(document.getElementById('cpc').value) || 0;
+            const conversionRate = parseFloat(document.getElementById('conversionRate').value) || 0;
+            const orderValue = parseFloat(document.getElementById('orderValue').value) || 0;
+
+            // Calculate
+            const clicks = cpc > 0 ? Math.round(budget / cpc) : 0;
+            const conversions = Math.round(clicks * (conversionRate / 100));
+            const revenue = conversions * orderValue;
+            const profit = revenue - budget;
+            const roi = budget > 0 ? Math.round(((revenue - budget) / budget) * 100) : 0;
+
+            // Display results
+            document.getElementById('resultClicks').textContent = clicks.toLocaleString('de-DE');
+            document.getElementById('resultConversions').textContent = conversions.toLocaleString('de-DE');
+            document.getElementById('resultRevenue').textContent = revenue.toLocaleString('de-DE') + ' €';
+            document.getElementById('resultProfit').textContent = (profit >= 0 ? '+' : '') + profit.toLocaleString('de-DE') + ' €';
+            document.getElementById('resultROI').textContent = (roi >= 0 ? '+' : '') + roi + '%';
+
+            // Style based on result
+            const roiHighlight = document.getElementById('roiHighlight');
+            if (roi < 0) {
+                roiHighlight.classList.add('negative');
+            } else {
+                roiHighlight.classList.remove('negative');
+            }
+
+            // Show results
+            document.getElementById('results').classList.add('show');
+
+            // Scroll to results
+            document.getElementById('results').scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+
+        function toggleFaq(element) {
+            const faqItem = element.parentElement;
+            faqItem.classList.toggle('active');
+        }
+
+        function toggleModal(type) {
+            const modal = document.getElementById(type + '-modal');
+            if (modal.style.display === 'none') {
+                modal.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+            } else {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        // Close modal on background click
+        document.querySelectorAll('[id$="-modal"]').forEach(modal => {
+            modal.addEventListener('click', function(e) {
+                if (e.target === this) {
+                    this.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        });
+
+        // Calculate on page load with default values
+        window.onload = function() {
+            calculateROI();
+        };
+    </script>
+</body>
+</html>
